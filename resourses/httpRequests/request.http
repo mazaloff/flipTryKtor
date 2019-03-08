@@ -1,0 +1,10 @@
+
+GET {{host}}/flip
+Content-Type: application/json
+
+###
+
+GET {{host}}/outcomes
+Content-Type: application/json
+
+###
