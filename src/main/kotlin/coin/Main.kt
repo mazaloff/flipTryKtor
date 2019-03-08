@@ -24,6 +24,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import org.slf4j.event.Level
 import java.security.SecureRandom
 
+import settings.Settings
 
 fun Application.main() {
     val secureRandom = SecureRandom()
@@ -105,6 +106,6 @@ object RESULTS : Table() {
 fun connect(): Database {
     return Database.connect(
         "jdbc:postgresql://localhost:5432/productREST",
-        user = "postgres", password = "gjkmpf1974", driver = "org.postgresql.Driver"
+        user = "postgres", password = Settings.passwordPostgresql, driver = "org.postgresql.Driver"
     )
 }
